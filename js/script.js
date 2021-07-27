@@ -160,13 +160,10 @@ function displayBtn() {
     btn_overview.innerHTML = 'overview';
     btn_structure.innerHTML = 'structure';
     btn_geology.innerHTML = 'surface';
-    console.log('mobile')
   } else if (width > 601){
     btn_overview.innerHTML = '<span class="hero__span">01</span>overview';
     btn_structure.innerHTML = '<span class="hero__span">02</span>internal structure';
     btn_geology.innerHTML = '<span class="hero__span">03</span>surface geology';
-    console.log('else')
-
   }
 }
 
@@ -193,10 +190,27 @@ function setThemeColor(data, idx) {
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
 function setBorderColor(e, data, idx) {
   const { color } = data[idx];
+  let width = window.innerWidth;
 
-  document.querySelectorAll('.nav__item').forEach(item => {
-    e.target.style.borderTopColor = color.theme;
-  })
+  if (width < 901 && width > 600) {
+    document.querySelectorAll('.nav__item').forEach(item => {
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = color.theme;
+      console.log('tablet')
+    })
+  } else if (width > 900) {
+    document.querySelectorAll('.nav__item').forEach(item => {
+      e.target.style.borderTopColor = color.theme;
+      e.target.style.borderBottomColor = 'transparent';
+      console.log('desktop')
+    })
+  } else if (width < 601) {
+     document.querySelectorAll('.nav__item').forEach(item => {
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = 'transparent';
+      console.log('mobile')
+    })
+  }
 }
 
 // ========== EVENT LISTENERS ==========
@@ -234,4 +248,7 @@ btn_toggle.addEventListener('click', () => {
   document.querySelector('.hero__btn-box').classList.toggle('hide');
 })
 
-window.onresize = displayBtn;
+window.addEventListener('resize', (e) => {
+  displayBtn();
+  setBorderColor(e, data, idxOfPage);
+})
