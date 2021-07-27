@@ -154,6 +154,7 @@ function displayBtn() {
   const btn_overview = document.querySelector('#overview');
   const btn_structure = document.querySelector('#structure');
   const btn_geology = document.querySelector('#geology');
+  let width = window.innerWidth;
 
   if (width < 601) {
     btn_overview.innerHTML = 'overview';
