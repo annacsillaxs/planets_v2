@@ -27,12 +27,12 @@ function getPagesArr(data) {
 
   for (let i = 0; i < data.length; i++) {
     
-    if (data[i].name === 'mercury') {
+    if (data[i].name === 'Mercury') {
       data[i].name = 'index';
     }
     pagesArr.push((data[i].name).toLowerCase());
   }
-  idxOfPage = pagesArr.indexOf(`${page === '' ? 'index' : page}`);
+  idxOfPage = pagesArr.indexOf(`${page === '' ? 'mercury' : page}`);
   return idxOfPage;
 }
 
