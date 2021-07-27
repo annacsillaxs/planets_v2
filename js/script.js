@@ -18,6 +18,7 @@ async function init() {
   showDesc(data, "overview", idxOfPage);
   initImg(data, idxOfPage);
   displayInfo(data, idxOfPage);
+  setThemeColor(data, idxOfPage)
 }
 
 init();
@@ -156,8 +157,11 @@ function initImg(data, idx) {
 }
 
 // ========== SET THEME COLOR ==========
-document.querySelector('.btn--active').style.backgroundColor = `$clr-${page === '' || page === 'index.html' ? 'index' : page}`;
-
+function setThemeColor(data, idx) {
+  const { color } = data[idx];
+  
+  document.querySelector('.btn--active').style.backgroundColor = color.theme;
+}
 
 
 // ========== EVENT LISTENERS ==========
