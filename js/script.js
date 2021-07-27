@@ -200,26 +200,23 @@ function setThemeColor(data, idx) {
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
 function setBorderColor(e, data, idx) {
   const { color } = data[idx];
+  const navNode = document.querySelectorAll('.nav__item');
 
-  if (width < 901 && width > 600) {
-    document.querySelectorAll('.nav__item').forEach(item => {
-      e.target.style.borderTopColor = 'transparent';
-      e.target.style.borderBottomColor = color.theme;
-      console.log('tablet')
-    })
-  } else if (width > 900) {
-    document.querySelectorAll('.nav__item').forEach(item => {
+  navNode.forEach(item => function() {
+    if (width > 900) {
       e.target.style.borderTopColor = color.theme;
       e.target.style.borderBottomColor = 'transparent';
-      console.log('desktop')
-    })
-  } else if (width < 601) {
-     document.querySelectorAll('.nav__item').forEach(item => {
+      console.log('desktop');
+    } else if (width < 901 && width > 600) {
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = color.theme;
+      console.log('tablet');
+    } else if (width < 601) {
       e.target.style.borderTopColor = 'transparent';
       e.target.style.borderBottomColor = 'transparent';
-      console.log('mobile')
-    })
-  }
+      console.log('mobile');
+    }
+  })
 }
 
 // ========== EVENT LISTENERS ==========
