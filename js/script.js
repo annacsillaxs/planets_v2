@@ -203,7 +203,7 @@ function setBorderColor(e, data, idx) {
   const { color } = data[idx];
   const navNode = document.querySelectorAll('.nav__item');
   let width = window.innerWidth;
-
+  console.log('test')
 
   navNode.forEach(item => function() {
     if (width > 900) {
