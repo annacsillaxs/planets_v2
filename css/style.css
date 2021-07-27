@@ -202,7 +202,6 @@ li {
       .nav__item {
         border-bottom: 3px solid transparent; }
       .nav__item:hover {
-        border-bottom-color: #419ebb;
         border-top-color: transparent; } }
   @media (max-width: 600px) {
     .nav {
