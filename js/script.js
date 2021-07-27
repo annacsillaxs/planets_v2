@@ -187,7 +187,7 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
 
 const navNode = document.querySelectorAll('.nav__item');
 console.log(navNode)
-document.querySelectorAll('.nav__item').forEach(item => item.addEventListener('mouseover', (e) => {
+document.querySelectorAll('.nav__item').forEach(item => item.addEventListener('mouseover', function(e) {
   if (e.target) {
     console.log('mouseover')
   } else {
