@@ -180,14 +180,19 @@ function setThemeColor(data, idx) {
   let width = window.innerWidth;
 
   document.querySelectorAll('.btn').forEach(btn => {
-    if (btn.classList.contains('btn--active') && width > 601) {
-      btn.style.backgroundColor = color.theme;
-    } else if (btn.classList.contains('btn--active') && width < 600) {
-      btn.style.backgroundColor = 'transparent';
-      btn.style.borderBottomColor = color.theme;
-    } else {
-      btn.style.backgroundColor = 'transparent';
-      btn.style.borderBottomColor = '#38384f';
+    if (width > 600) {
+      if (btn.classList.contains('btn--active')) {
+        btn.style.backgroundColor = color.theme;
+      } else {
+        btn.style.backgroundColor = 'transparent';
+      }
+    } else if (width < 601) {
+       if (btn.classList.contains('btn--active')) {
+        btn.style.backgroundColor = 'transparent';
+        btn.style.borderBottomColor = color.theme;
+      } else {
+        btn.style.borderBottomColor = 'transparent';
+      }
     }
   })
 }
