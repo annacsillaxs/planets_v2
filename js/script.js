@@ -185,6 +185,16 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
   setThemeColor(data, idxOfPage);
 }))
 
+const navNode = document.querySelectorAll('.nav__item');
+navNode.forEach(item => item.addEventListener('mouseover', (data, idxOfPage) => {
+  const { color } = data[idxOfPage];
+  item.style.borderTopColor = color.theme;
+}))
+
+navNode.forEach(item => item.addEventListener('mouseout', () => {
+  item.style.borderTopColor = 'transparent';
+}))
+
 const btn_toggle = document.querySelector('#btn__toggle');
 
 btn_toggle.addEventListener('click', () => {
