@@ -177,12 +177,17 @@ function initImg(data, idx) {
 // ========== SET THEME COLOR ==========
 function setThemeColor(data, idx) {
   const { color } = data[idx];
+  let width = window.innerWidth;
 
   document.querySelectorAll('.btn').forEach(btn => {
-    if (btn.classList.contains('btn--active')) {
+    if (btn.classList.contains('btn--active') && width > 601) {
       btn.style.backgroundColor = color.theme;
+    } else if (btn.classList.contains('btn--active') && width < 600) {
+      btn.style.backgroundColor = 'transparent';
+      btn.style.borderBottomColor = color.theme;
     } else {
       btn.style.backgroundColor = 'transparent';
+      btn.style.borderBottomColor = 'transparent';
     }
   })
 }
