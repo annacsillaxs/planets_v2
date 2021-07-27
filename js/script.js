@@ -170,6 +170,7 @@ function setThemeColor(data, idx) {
   })
 }
 
+// ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
 function setBorderColor(e, data, idx) {
   const { color } = data[idx];
 
@@ -177,6 +178,20 @@ function setBorderColor(e, data, idx) {
     e.target.style.borderTopColor = color.theme;
   })
 }
+
+// ========== MEDIA QUERY FOR BTN-BOX MOBILE SCREEN ==========
+const mql = window.matchMedia('(max-width: 600px)');
+
+mql.addEventListener( "change", (e) => {
+    if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    console.log('This is a narrow screen — less than 600px wide.')
+  } else {
+    /* the viewport is more than than 600 pixels wide */
+    console.log('This is a wide screen — more than 600px wide.')
+  }
+})
+
 
 
 // ========== EVENT LISTENERS ==========
