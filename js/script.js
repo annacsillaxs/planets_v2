@@ -203,20 +203,20 @@ function setBorderColor(e, data, idx) {
 
   if (width < 901 && width > 600) {
     document.querySelectorAll('.nav__item').forEach(item => {
-      item.style.borderTopColor = 'transparent';
-      item.style.borderBottomColor = color.theme;
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = color.theme;
       console.log('tablet')
     })
   } else if (width > 900) {
     document.querySelectorAll('.nav__item').forEach(item => {
-      item.style.borderTopColor = color.theme;
-      item.style.borderBottomColor = 'transparent';
+      e.target.style.borderTopColor = color.theme;
+      e.target.style.borderBottomColor = 'transparent';
       console.log('desktop')
     })
   } else if (width < 601) {
      document.querySelectorAll('.nav__item').forEach(item => {
-      item.style.borderTopColor = 'transparent';
-      item.style.borderBottomColor = 'transparent';
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = 'transparent';
       console.log('mobile')
     })
   }
@@ -232,7 +232,10 @@ btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
 
   if (width > 600) {
     btn.style.backgroundColor = '#38384f';
-  } 
+  } else {
+    btn.style.backgroundColor = 'transparent';
+
+  }
 }))
 
 btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
