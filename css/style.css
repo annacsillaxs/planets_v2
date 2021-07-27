@@ -119,20 +119,17 @@ li {
   @media (max-width: 600px) {
     .btn:hover {
       background-color: transparent;
-      border-bottom-color: inherit;
       opacity: 1; } }
 
 @media (max-width: 600px) {
   .btn--active {
     background-color: transparent;
-    border-bottom-color: inherit;
     opacity: 1; } }
 
 .btn--active:hover {
   opacity: 0.8; }
   @media (max-width: 600px) {
     .btn--active:hover {
-      background-color: transparent;
       opacity: 1; } }
 
 .container {

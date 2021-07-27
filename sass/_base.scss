@@ -165,27 +165,24 @@ li {
 
   @media (max-width: $mobile) {
     background-color: transparent;
-    border-bottom-color: inherit;
+    // border-bottom-color: inherit;
     opacity: 1;
   }
 }
 
 .btn--active {
-  // background-color: $clr-mercury;
-
   @media (max-width: $mobile) {
     background-color: transparent;
-    border-bottom-color: inherit;
+    // border-bottom-color: inherit;
     opacity: 1;
   }
 }
 
 .btn--active:hover {
-  // background-color: $clr-mercury;
   opacity: 0.8;
 
   @media (max-width: $mobile) {
-    background-color: transparent;
+    // background-color: transparent;
     opacity: 1;
   }
 }
