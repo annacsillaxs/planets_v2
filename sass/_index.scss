@@ -218,7 +218,7 @@
       margin: 0 auto 5rem;
     }
 
-    &__img.surface::after {
+    &__img--geology {
       bottom: -90%;
       width: 122px;
       height: 149px;
@@ -244,12 +244,13 @@
   @media (max-width: $mobile) {
     margin: 7.5rem auto 1rem;
 
-    &__img {
+    &__img,
+    &__img.overview {
       width: 111px;
       height: 111px;
     }
 
-    &__img.surface::after {
+    &__img--geology {
       bottom: -100%;
       width: 81px;
       height: 98px;

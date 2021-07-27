@@ -293,7 +293,7 @@ li {
       width: 184px;
       height: 184px;
       margin: 0 auto 5rem; }
-    .hero__img.surface::after {
+    .hero__img--geology {
       bottom: -90%;
       width: 122px;
       height: 149px; }
@@ -310,10 +310,10 @@ li {
   @media (max-width: 600px) {
     .hero {
       margin: 7.5rem auto 1rem; }
-      .hero__img {
+      .hero__img, .hero__img.overview {
         width: 111px;
         height: 111px; }
-      .hero__img.surface::after {
+      .hero__img--geology {
         bottom: -100%;
         width: 81px;
         height: 98px; }
