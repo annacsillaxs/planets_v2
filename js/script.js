@@ -170,11 +170,11 @@ function setThemeColor(data, idx) {
   })
 }
 
-function setBorderColor(data, idx) {
+function setBorderColor(e, data, idx) {
   const { color } = data[idx];
 
   document.querySelectorAll('.nav__item').forEach(item => {
-    item.style.borderTopColor = color.theme;
+    e.target.style.borderTopColor = color.theme;
   })
 }
 
@@ -196,16 +196,16 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
 let navList = document.querySelector('.nav__list');
 navList.addEventListener('mouseover', function(e) {
   if (e.target) {
-    setBorderColor(data, idxOfPage);
+    setBorderColor(e, data, idxOfPage);
     console.log('mouseover')
   }
   
 });
 
-navNode.forEach(item => item.addEventListener('mouseout', (e) => {
-  item.target.style.borderTopColor = 'transparent';
-  console.log('mouseout')
-}))
+// navNode.forEach(item => item.addEventListener('mouseout', (e) => {
+//   item.target.style.borderTopColor = 'transparent';
+//   console.log('mouseout')
+// }))
 
 const btn_toggle = document.querySelector('#btn__toggle');
 
