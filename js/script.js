@@ -181,6 +181,10 @@ btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
   e.target.style.backgroundColor = '#38384f';
 }))
 
+btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
+  setThemeColor(data, idxOfPage);
+}))
+
 const btn_toggle = document.querySelector('#btn__toggle');
 
 btn_toggle.addEventListener('click', () => {
