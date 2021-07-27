@@ -30,7 +30,7 @@ function getPagesArr(data) {
     if (data[i].name === 'Mercury') {
       data[i].name = 'index';
     }
-    pagesArr.push(data[i].name);
+    pagesArr.push((data[i].name).toLowerCase());
   }
   idxOfPage = pagesArr.indexOf(`${page === '' ? 'index' : page}`);
   return idxOfPage;
