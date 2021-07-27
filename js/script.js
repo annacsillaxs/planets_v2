@@ -18,7 +18,8 @@ async function init() {
   showDesc(data, "overview", idxOfPage);
   initImg(data, idxOfPage);
   displayInfo(data, idxOfPage);
-  setThemeColor(data, idxOfPage)
+  setThemeColor(data, idxOfPage);
+  displayBtn();
 }
 
 init();
@@ -150,20 +151,23 @@ function displayInfo(data, idx) {
 
 // ========== DISPLAY BTN-BOX ON MOBILE ==========
 function displayBtn() {
-  const btn_box = document.querySelector('.hero__btn-box');
+  const btn_overview = document.querySelector('#overview');
+  const btn_internal = document.querySelector('#internal');
+  const btn_surface = document.querySelector('#surface');
+  let width = window.innerWidth;
 
-  btn_box.innerHTML = '';
+  if (width < 601) {
+    btn_overview.innerHTML = 'overview';
+    btn_internal.innerHTML = 'structure';
+    btn_surface.innerHTML = 'surface';
+    console.log('mobile')
+  } else {
+    btn_overview.innerHTML = '<span class="hero__span">01</span>overview';
+    btn_internal.innerHTML = '<span class="hero__span">02</span>internal structure';
+    btn_surface.innerHTML = '<span class="hero__span">03</span>surface geology';
+    console.log('else')
 
-  const boxEl = document.createElement('div');
-  boxEl.className = 'hero__btn-box--mobile flex';
-
-  boxEl.innerHTML = `
-    <button class="hero__btn btn btn--active" id="overview">overview</button>
-    <button class="hero__btn btn" id="internal">structure</button>
-    <button class="hero__btn btn" id="surface">surface</button>
-  `
-
-  btn_box.appendChild(boxEl);
+  }
 }
 
 // ========== INIT PLANET IMAGE ==========
@@ -194,21 +198,6 @@ function setBorderColor(e, data, idx) {
     e.target.style.borderTopColor = color.theme;
   })
 }
-
-// ========== MEDIA QUERY FOR BTN-BOX MOBILE SCREEN ==========
-const mql = window.matchMedia('(max-width: 600px)');
-
-mql.addEventListener( "change", (e) => {
-    if (e.matches) {
-    displayBtn();
-    console.log('This is a narrow screen — less than 600px wide.')
-  } else {
-    /* the viewport is more than than 600 pixels wide */
-    console.log('This is a wide screen — more than 600px wide.')
-  }
-})
-
-
 
 // ========== EVENT LISTENERS ==========
 btnNode.forEach(btn => btn.addEventListener('click', (e) => {
@@ -245,3 +234,4 @@ btn_toggle.addEventListener('click', () => {
   document.querySelector('.hero__btn-box').classList.toggle('hide');
 })
 
+window.addEventListener('change', displayBtn());
