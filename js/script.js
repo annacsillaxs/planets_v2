@@ -200,7 +200,7 @@ function setThemeColor(data, idx) {
 
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
 const navNode = document.querySelectorAll('.nav__item');
-function setBorderColor(e, data, idx) {
+function setBorderColor(data, idx) {
   const { color } = data[idx];
   let width = window.innerWidth;
   console.log('test')
@@ -248,7 +248,7 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
 let navList = document.querySelector('.nav__list');
   navList.addEventListener('mouseover', function(e) {
     if (e.target) {
-      setBorderColor(e, data, idxOfPage);
+      setBorderColor(data, idxOfPage);
     }
 });
 
@@ -267,7 +267,7 @@ btn_toggle.addEventListener('click', () => {
   document.querySelector('.hero__btn-box').classList.toggle('hide');
 })
 
-window.addEventListener('resize', (e) => {
+window.addEventListener('resize', () => {
   displayBtn();
-  setBorderColor(e, data, idxOfPage);
+  setBorderColor(data, idxOfPage);
 })
