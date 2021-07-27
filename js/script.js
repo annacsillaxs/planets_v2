@@ -108,10 +108,10 @@ function showImg(e, data, idx) {
       btnNode[i].classList.remove('btn--active');
       hero_img.classList.remove(`${btnNode[i].id}`);
       hero_img_geo.classList.remove(`${btnNode[i].id}`);
-      setThemeColor(data, idx);
     }
   }
-
+  setThemeColor(data, idx);
+  
   return btn_id;
 }
 
