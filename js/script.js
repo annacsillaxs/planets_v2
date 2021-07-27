@@ -156,7 +156,7 @@ function initImg(data, idx) {
 }
 
 // ========== SET THEME COLOR ==========
-document.querySelector('.btn--active').style.backgroundColor = `clr-${page === '' || page === 'index.html' ? 'index' : page}`;
+document.querySelector('.btn--active').style.backgroundColor = `$clr-${page === '' || page === 'index.html' ? 'index' : page}`;
 
 
 
