@@ -187,10 +187,12 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
 
 const navNode = document.querySelectorAll('.nav__item');
 console.log(navNode)
-document.querySelectorAll('.nav__item').forEach(item => item.addEventListener('mouseover', (e, data, idxOfPage) => {
-  const { color } = data[idxOfPage];
-  item.style.borderTopColor = color.theme;
-  console.log('mouseover')
+document.querySelectorAll('.nav__item').forEach(item => item.addEventListener('mouseover', (e) => {
+  if (e.target) {
+    console.log('mouseover')
+  } else {
+    console.log('broken')
+  }
 }))
 
 navNode.forEach(item => item.addEventListener('mouseout', (e) => {
