@@ -228,14 +228,12 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
   showDesc(data, active_id, idxOfPage);
 }));
 
-btnNode.forEach(btn => btn.addEventListener('mouseover', (e, data, idxOfPage) => {
-  const { color } = data[idxOfPage];
+btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
 
   if (width > 600) {
     btn.style.backgroundColor = '#38384f';
   } else if (width < 601) {
-    btn.style.borderBottomColor = color.theme;
-    btn.style.backgroundColor = 'transparent';
+    setBorderColor(e, data, idxOfPage);
   }
 }))
 
