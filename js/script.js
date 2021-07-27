@@ -236,7 +236,7 @@ navList.addEventListener('mouseover', function(e) {
 
 navList.addEventListener('mouseout', function(e) {
   if (e.target) {
-    e.target.style.borderTopColor = 'transparent';
+    e.target.style.borderBottomColor = 'transparent';
     console.log('mouseout')
   }
 })
