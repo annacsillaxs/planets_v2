@@ -111,6 +111,7 @@ function showImg(e, data, idx) {
     }
   }
 
+  setThemeColor(data, idx);
   return btn_id;
 }
 
