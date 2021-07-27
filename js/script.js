@@ -231,8 +231,9 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
 btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
   if (width > 600) {
     btn.style.backgroundColor = '#38384f';
-  } else {
-    setThemeColor(data, idxOfPage);
+  } else if (width < 601) {
+    btn.style.borderBottomColor = color.theme;
+    btn.style.backgroundColor = 'transparent';
   }
 }))
 
