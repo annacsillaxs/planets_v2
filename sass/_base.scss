@@ -1,0 +1,191 @@
+// ==================== VARIABLES ====================
+$tablet: 900px;
+$mobile: 600px;
+
+$clr-light: #ffffff;
+$clr-dark: #070724;
+$clr-dark-grey: #38384f;
+$clr-light-grey: #838391;
+
+$clr-mercury: #419ebb;
+$clr-venus: #eda249;
+$clr-earth: #6f2ed6;
+$clr-mars: #d14c32;
+$clr-jupiter: #d83a34;
+$clr-saturn: #cd5120;
+$clr-uranus: #1ec2a4;
+$clr-neptune: #2d68f0;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 0.6875rem;
+  font-size: clamp(0.6875rem, calc(0.65rem + 0.1875vw), 0.875rem);
+  line-height: 25px;
+  color: $clr-light;
+  background-color: $clr-dark;
+  background-image: url(/dist/assets/background-stars.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  // overflow-y: hidden;
+
+  @media (max-width: $tablet) {
+    line-height: 22px;
+    height: auto;
+    overflow-y: scroll;
+  }
+}
+
+// font-family: 'Antonio', sans-serif;
+// font-family: 'Spartan', sans-serif;
+
+// ==================== TYPOGRAPHY ====================
+h1 {
+  font-family: "Antonio", sans-serif;
+  font-size: 2.5rem;
+  font-size: clamp(
+    2.5rem,
+    calc(1.7857142857142858rem + 3.571428571428571vw),
+    5rem
+  );
+  line-height: 103px;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  @media (max-width: $tablet) {
+    line-height: 62.11px;
+  }
+
+  @media (max-width: $mobile) {
+    line-height: 51.76px;
+  }
+}
+
+h2 {
+  font-size: 0.5rem;
+  font-size: clamp(0.5rem, calc(0.4625rem + 0.1875vw), 0.6875rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 25px;
+  opacity: 0.5;
+
+  @media (max-width: $tablet) {
+    letter-spacing: 0.73px;
+    line-height: 16px;
+  }
+}
+
+h3 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, calc(1rem + 1.25vw), 2.5rem);
+  letter-spacing: -1.5px;
+  line-height: 51.76px;
+
+  @media (max-width: $tablet) {
+    letter-spacing: -0.9px;
+    line-height: 31.05px;
+  }
+
+  @media (max-width: $mobile) {
+    letter-spacing: -0.75px;
+    line-height: 25.88px;
+  }
+}
+
+h4 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: -1.05px;
+  line-height: 36.23px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 0.5625rem;
+  font-size: clamp(0.5625rem, calc(0.525rem + 0.1875vw), 0.75rem);
+  line-height: 25px;
+  letter-spacing: 2.57px;
+  color: inherit;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $clr-dark-grey;
+  border-radius: 3px;
+  text-align: start;
+  padding: 1em 0 0.7em;
+  display: inline-block;
+  cursor: pointer;
+
+  span {
+    padding: 0 2em;
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet) {
+    letter-spacing: 1.93px;
+  }
+
+  @media (max-width: $mobile) {
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    opacity: 0.5;
+  }
+}
+
+.btn:hover {
+  background-color: $clr-dark-grey;
+
+  @media (max-width: $mobile) {
+    background-color: transparent;
+    border-bottom-color: $clr-mercury;
+    opacity: 1;
+  }
+}
+
+.btn--active {
+  background-color: $clr-mercury;
+
+  @media (max-width: $mobile) {
+    background-color: transparent;
+    border-bottom-color: $clr-mercury;
+    opacity: 1;
+  }
+}
+
+.btn--active:hover {
+  background-color: $clr-mercury;
+  opacity: 0.8;
+
+  @media (max-width: $mobile) {
+    background-color: transparent;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&family=Spartan:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Planets fact site</title>
+</head>
+
+<body>
+  <nav class="nav flex" id="nav-neptune">
+    <h4 class="nav__logo">the planets</h4>
+    <div class="nav__line"></div>
+    <ul class="nav__list flex"></ul>
+    <img src="/dist/assets/icon-hamburger.svg" alt="toggle menu" class="nav__toggle" id="btn__toggle">
+  </nav>
+
+  <main class="hero" id="hero-Neptune">
+    <div class="hero__container flex container">
+      <div class="hero__img-box flex">
+        <div class="hero__img">
+          <div class="hero__img--geology"></div>
+        </div>
+
+      </div>
+      <div class="hero__content-box flex col">
+        <div class="hero__text-box"></div>
+        <div class="hero__btn-box flex col">
+          <button class="hero__btn btn btn--active" id="overview"><span class="hero__span">01</span>overview</button>
+          <button class="hero__btn btn" id="structure"><span class="hero__span">02</span>internal structure</button>
+          <button class="hero__btn btn" id="geology"><span class="hero__span">03</span>surface geology</button>
+          <!-- <button class="hero__btn btn btn--active" id="overview">overview</button>
+          <button class="hero__btn btn" id="internal">structure</button>
+          <button class="hero__btn btn" id="surface">surface</button> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="info" class="info">
+    <div class="info__container"></div>
+  </section>
+
+  <footer id="footer" class="footer flex">
+    <small class="footer__attribution container">Challenge by <a class="footer__link"
+        href="https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f" target="_blank">Frontend Mentor</a>.
+      Coded by <a class="footer__link" href="https://annaseregi.me">Anna Seregi</a>.</small>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

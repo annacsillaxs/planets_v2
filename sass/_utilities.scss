@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.grid {
+  place-items: center;
+}
