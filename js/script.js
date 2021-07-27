@@ -161,7 +161,7 @@ function displayBtn() {
     btn_structure.innerHTML = 'structure';
     btn_geology.innerHTML = 'surface';
     console.log('mobile')
-  } else {
+  } else if (width > 601){
     btn_overview.innerHTML = '<span class="hero__span">01</span>overview';
     btn_structure.innerHTML = '<span class="hero__span">02</span>internal structure';
     btn_geology.innerHTML = '<span class="hero__span">03</span>surface geology';
@@ -234,4 +234,4 @@ btn_toggle.addEventListener('click', () => {
   document.querySelector('.hero__btn-box').classList.toggle('hide');
 })
 
-window.addEventListener('change', displayBtn());
+window.onresize = displayBtn;
