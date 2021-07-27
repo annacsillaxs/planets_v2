@@ -232,9 +232,7 @@ btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
 
   if (width > 600) {
     btn.style.backgroundColor = '#38384f';
-  } else if (width < 601) {
-    setBorderColor(e, data, idxOfPage);
-  }
+  } 
 }))
 
 btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
