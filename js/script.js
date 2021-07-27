@@ -183,8 +183,10 @@ function setThemeColor(data, idx) {
     if (width > 600) {
       if (btn.classList.contains('btn--active')) {
         btn.style.backgroundColor = color.theme;
+        btn.style.borderBottomColor = 'transparent';
       } else {
         btn.style.backgroundColor = 'transparent';
+        btn.style.borderBottomColor = '#38384f';
       }
     } else if (width < 601) {
        if (btn.classList.contains('btn--active')) {
@@ -199,7 +201,7 @@ function setThemeColor(data, idx) {
 }
 
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
-const navNode = document.querySelectorAll('.nav__item');
+// const navNode = document.querySelectorAll('.nav__item');
 function setBorderColor(e, data, idx) {
   const { color } = data[idx];
   let width = window.innerWidth;
