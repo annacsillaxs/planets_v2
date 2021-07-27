@@ -228,7 +228,9 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
   showDesc(data, active_id, idxOfPage);
 }));
 
-btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
+btnNode.forEach(btn => btn.addEventListener('mouseover', (e, data, idxOfPage) => {
+  const { color } = data[idxOfPage];
+
   if (width > 600) {
     btn.style.backgroundColor = '#38384f';
   } else if (width < 601) {
