@@ -197,15 +197,13 @@ let navList = document.querySelector('.nav__list');
 navList.addEventListener('mouseover', function(e) {
   if (e.target) {
     setBorderColor(e, data, idxOfPage);
-    console.log('mouseover')
   }
-  
 });
 
-// navNode.forEach(item => item.addEventListener('mouseout', (e) => {
-//   item.target.style.borderTopColor = 'transparent';
-//   console.log('mouseout')
-// }))
+navList.forEach(item => item.addEventListener('mouseout', (e) => {
+  item.target.style.borderTopColor = 'transparent';
+  console.log('mouseout')
+}))
 
 const btn_toggle = document.querySelector('#btn__toggle');
 
