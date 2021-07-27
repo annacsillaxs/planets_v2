@@ -207,11 +207,13 @@ function setBorderColor(e, data, idx) {
       e.target.style.borderTopColor = color.theme;
       e.target.style.borderBottomColor = 'transparent';
       console.log('desktop');
-    } else if (width < 901 && width > 600) {
+    }
+    if (width < 901 && width > 600) {
       e.target.style.borderTopColor = 'transparent';
       e.target.style.borderBottomColor = color.theme;
       console.log('tablet');
-    } else if (width < 601) {
+    } 
+    if (width < 601) {
       e.target.style.borderTopColor = 'transparent';
       e.target.style.borderBottomColor = 'transparent';
       console.log('mobile');
