@@ -329,8 +329,11 @@ li {
         max-width: 100%;
         width: 100%;
         padding: 0 2em;
-        justify-content: space-between;
         border-bottom: 1px solid #38384f; }
+      .hero__btn-box--mobile {
+        justify-content: space-between;
+        max-width: 100%;
+        width: 100%; }
       .hero__btn-box.hide {
         display: none; }
       .hero button + button {
