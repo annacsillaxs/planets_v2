@@ -200,10 +200,12 @@ navList.addEventListener('mouseover', function(e) {
   }
 });
 
-navList.forEach(item => item.addEventListener('mouseout', (e) => {
-  item.target.style.borderTopColor = 'transparent';
-  console.log('mouseout')
-}))
+navList.addEventListener('mouseout', function(e) {
+  if (e.target) {
+    item.target.style.borderTopColor = 'transparent';
+    console.log('mouseout')
+  }
+})
 
 const btn_toggle = document.querySelector('#btn__toggle');
 
