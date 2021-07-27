@@ -187,7 +187,7 @@ function setThemeColor(data, idx) {
       btn.style.borderBottomColor = color.theme;
     } else {
       btn.style.backgroundColor = 'transparent';
-      btn.style.borderBottomColor = 'transparent';
+      btn.style.borderBottomColor = 'inherit';
     }
   })
 }
