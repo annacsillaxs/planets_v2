@@ -152,19 +152,19 @@ function displayInfo(data, idx) {
 // ========== DISPLAY BTN-BOX ON MOBILE ==========
 function displayBtn() {
   const btn_overview = document.querySelector('#overview');
-  const btn_internal = document.querySelector('#internal');
-  const btn_surface = document.querySelector('#surface');
+  const btn_structure = document.querySelector('#structure');
+  const btn_geology = document.querySelector('#geology');
   let width = window.innerWidth;
 
   if (width < 601) {
     btn_overview.innerHTML = 'overview';
-    btn_internal.innerHTML = 'structure';
-    btn_surface.innerHTML = 'surface';
+    btn_structure.innerHTML = 'structure';
+    btn_geology.innerHTML = 'surface';
     console.log('mobile')
   } else {
     btn_overview.innerHTML = '<span class="hero__span">01</span>overview';
-    btn_internal.innerHTML = '<span class="hero__span">02</span>internal structure';
-    btn_surface.innerHTML = '<span class="hero__span">03</span>surface geology';
+    btn_structure.innerHTML = '<span class="hero__span">02</span>internal structure';
+    btn_geology.innerHTML = '<span class="hero__span">03</span>surface geology';
     console.log('else')
 
   }
