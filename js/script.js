@@ -27,7 +27,7 @@ function getPagesArr(data) {
 
   for (let i = 0; i < data.length; i++) {
     
-    if (data[i].name === 'Mercury') {
+    if (data[i].name === 'mercury') {
       data[i].name = 'index';
     }
     pagesArr.push((data[i].name).toLowerCase());
