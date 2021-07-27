@@ -161,7 +161,7 @@ function initImg(data, idx) {
 function setThemeColor(data, idx) {
   const { color } = data[idx];
   
-  document.querySelector('.btn--active').style.backgroundColor = color.theme;
+  document.querySelectorAll('.btn--active').forEach(btn => btn.style.backgroundColor = color.theme);
 }
 
 
