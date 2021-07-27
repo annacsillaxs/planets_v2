@@ -205,7 +205,6 @@ function setBorderColor(e, data, idx) {
   let width = window.innerWidth;
   console.log('test')
 
-  // navNode.forEach(item => function(e) {
     if (width > 900) {
       e.target.style.borderTopColor = color.theme;
       e.target.style.borderBottomColor = 'transparent';
@@ -221,7 +220,6 @@ function setBorderColor(e, data, idx) {
       e.target.style.borderBottomColor = 'transparent';
       console.log('mobile');
     }
-  // })
 }
 
 // ========== EVENT LISTENERS ==========
