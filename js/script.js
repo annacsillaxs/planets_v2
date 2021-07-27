@@ -1,6 +1,7 @@
 let data;
 let pagesArr = [];
 let idxOfPage;
+let width = window.innerWidth;
 
 
 const hero_img = document.querySelector('.hero__img');
@@ -154,7 +155,6 @@ function displayBtn() {
   const btn_overview = document.querySelector('#overview');
   const btn_structure = document.querySelector('#structure');
   const btn_geology = document.querySelector('#geology');
-  let width = window.innerWidth;
 
   if (width < 601) {
     btn_overview.innerHTML = 'overview';
@@ -177,7 +177,6 @@ function initImg(data, idx) {
 // ========== SET THEME COLOR ==========
 function setThemeColor(data, idx) {
   const { color } = data[idx];
-  let width = window.innerWidth;
 
   document.querySelectorAll('.btn').forEach(btn => {
     if (width > 600) {
@@ -201,7 +200,6 @@ function setThemeColor(data, idx) {
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
 function setBorderColor(e, data, idx) {
   const { color } = data[idx];
-  let width = window.innerWidth;
 
   if (width < 901 && width > 600) {
     document.querySelectorAll('.nav__item').forEach(item => {
@@ -231,7 +229,11 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
 }));
 
 btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
-  btn.style.backgroundColor = '#38384f';
+  if (width > 600) {
+    btn.style.backgroundColor = '#38384f';
+  } else {
+    setThemeColor(data, idxOfPage);
+  }
 }))
 
 btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
