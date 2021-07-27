@@ -187,7 +187,7 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
 
 const navNode = document.querySelectorAll('.nav__item');
 console.log(navNode)
-navNode.forEach(item => item.addEventListener('mouseover', (e, data, idxOfPage) => {
+document.querySelectorAll('.nav__item').forEach(item => item.addEventListener('mouseover', (e, data, idxOfPage) => {
   const { color } = data[idxOfPage];
   item.style.borderTopColor = color.theme;
   console.log('mouseover')
