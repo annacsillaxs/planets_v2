@@ -1,7 +1,6 @@
 let data;
 let pagesArr = [];
 let idxOfPage;
-let width = window.innerWidth;
 
 
 const hero_img = document.querySelector('.hero__img');
@@ -177,6 +176,7 @@ function initImg(data, idx) {
 // ========== SET THEME COLOR ==========
 function setThemeColor(data, idx) {
   const { color } = data[idx];
+  let width = window.innerWidth;
 
   document.querySelectorAll('.btn').forEach(btn => {
     if (width > 600) {
@@ -201,6 +201,8 @@ function setThemeColor(data, idx) {
 function setBorderColor(e, data, idx) {
   const { color } = data[idx];
   const navNode = document.querySelectorAll('.nav__item');
+  let width = window.innerWidth;
+
 
   navNode.forEach(item => function() {
     if (width > 900) {
@@ -228,6 +230,7 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
 }));
 
 btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
+  let width = window.innerWidth;
 
   if (width > 600) {
     btn.style.backgroundColor = '#38384f';
