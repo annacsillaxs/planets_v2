@@ -148,7 +148,23 @@ function displayInfo(data, idx) {
 
 }
 
+// ========== DISPLAY BTN-BOX ON MOBILE ==========
+function displayBtn() {
+  const btn_box = document.querySelector('.hero__btn-box');
 
+  btn_box.innerHTML = '';
+
+  const boxEl = document.createElement('div');
+  boxEl.className = 'hero__btn-box--mobile flex';
+
+  boxEl.innerHTML = `
+    <button class="hero__btn btn btn--active" id="overview">overview</button>
+    <button class="hero__btn btn" id="internal">structure</button>
+    <button class="hero__btn btn" id="surface">surface</button>
+  `
+
+  btn_box.appendChild(boxEl);
+}
 
 // ========== INIT PLANET IMAGE ==========
 function initImg(data, idx) {
@@ -184,7 +200,7 @@ const mql = window.matchMedia('(max-width: 600px)');
 
 mql.addEventListener( "change", (e) => {
     if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
+    displayBtn();
     console.log('This is a narrow screen — less than 600px wide.')
   } else {
     /* the viewport is more than than 600 pixels wide */
