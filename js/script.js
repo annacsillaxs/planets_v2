@@ -178,7 +178,7 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
 }));
 
 btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
-  e.target.style.backgroundColor = '#38384f';
+  btn.style.backgroundColor = '#38384f';
 }))
 
 btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
