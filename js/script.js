@@ -2,12 +2,13 @@ let data;
 let pagesArr = [];
 let idxOfPage;
 
+
 const hero_img = document.querySelector('.hero__img');
 const hero_img_geo = document.querySelector('.hero__img--geology');
 
 
 const path = window.location.pathname;
-const page = path.split("/").pop().split('.html')[0];
+const page = path.split("/")[1];
 
 async function init() {
   const res = await fetch('../../data.json');
@@ -31,7 +32,7 @@ function getPagesArr(data) {
     }
     pagesArr.push(data[i].name);
   }
-  idxOfPage = pagesArr.indexOf(page);
+  idxOfPage = pagesArr.indexOf(`${page === ''} ? 'index' : page`);
   return idxOfPage;
 }
 
