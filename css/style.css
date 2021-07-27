@@ -293,7 +293,7 @@ li {
       width: 184px;
       height: 184px;
       margin: 0 auto 5rem; }
-    .hero__img--geology {
+    .hero__img--geology.geology {
       bottom: -90%;
       width: 122px;
       height: 149px; }
@@ -313,7 +313,7 @@ li {
       .hero__img, .hero__img.overview {
         width: 111px;
         height: 111px; }
-      .hero__img--geology {
+      .hero__img--geology.geology {
         bottom: -100%;
         width: 81px;
         height: 98px; }
