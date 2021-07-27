@@ -155,6 +155,10 @@ function initImg(data, idx) {
   hero_img.style.backgroundImage = `url(${images.planet})`;
 }
 
+// ========== SET THEME COLOR ==========
+document.querySelector('.btn--active').style.backgroundColor = `clr-${page === '' || page === 'index.html' ? 'index' : page}`;
+
+
 
 // ========== EVENT LISTENERS ==========
 btnNode.forEach(btn => btn.addEventListener('click', (e) => {
