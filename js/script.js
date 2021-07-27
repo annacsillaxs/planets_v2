@@ -177,6 +177,10 @@ btnNode.forEach(btn => btn.addEventListener('click', (e) => {
   showDesc(data, active_id, idxOfPage);
 }));
 
+btnNode.forEach(btn => btn.addEventListener('mouseover', (e) => {
+  e.target.style.backgroundColor = '#38384f';
+}))
+
 const btn_toggle = document.querySelector('#btn__toggle');
 
 btn_toggle.addEventListener('click', () => {

@@ -165,7 +165,7 @@ li {
 
   @media (max-width: $mobile) {
     background-color: transparent;
-    border-bottom-color: $clr-mercury;
+    border-bottom-color: inherit;
     opacity: 1;
   }
 }
@@ -175,13 +175,13 @@ li {
 
   @media (max-width: $mobile) {
     background-color: transparent;
-    border-bottom-color: $clr-mercury;
+    border-bottom-color: inherit;
     opacity: 1;
   }
 }
 
 .btn--active:hover {
-  background-color: $clr-mercury;
+  // background-color: $clr-mercury;
   opacity: 0.8;
 
   @media (max-width: $mobile) {
