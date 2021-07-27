@@ -32,7 +32,7 @@ function getPagesArr(data) {
     }
     pagesArr.push(data[i].name);
   }
-  idxOfPage = pagesArr.indexOf(`${page === ''} ? 'index' : page`);
+  idxOfPage = pagesArr.indexOf(`${page === '' ? 'index' : page}`);
   return idxOfPage;
 }
 
