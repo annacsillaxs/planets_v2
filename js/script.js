@@ -52,7 +52,7 @@ function showNav(names) {
     linkEl.href = `${name === 'Mercury' ? 'index' : name}.html`;
 
     linkEl.innerHTML = `
-      <span class="nav__bullet" style="background-color:${color.bullet};"></span><a class="nav__link">${name}<img src="./assets/icon-chevron.svg" alt="chevron" class="nav__arrow"></a>
+      <a class="nav__link"><span class="nav__bullet" style="background-color:${color.bullet};"></span>${name}<img src="./assets/icon-chevron.svg" alt="chevron" class="nav__arrow"></a>
     `
     nav__list.append(linkEl);
   });
