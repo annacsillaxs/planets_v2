@@ -49,10 +49,10 @@ function showNav(names) {
 
     const linkEl = document.createElement('li');
     linkEl.classList.add('nav__item');
-    linkEl.href = `${name === 'Mercury' ? 'index' : name}.html`;
+    // linkEl.href = `${name === 'Mercury' ? 'index' : name}.html`;
 
     linkEl.innerHTML = `
-      <a class="nav__link"><span class="nav__bullet" style="background-color:${color.bullet};"></span>${name}<img src="./assets/icon-chevron.svg" alt="chevron" class="nav__arrow"></a>
+      <a href='${name === 'Mercury' ? 'index' : name}.html' class="nav__link"><span class="nav__bullet" style="background-color:${color.bullet};"></span>${name}<img src="./assets/icon-chevron.svg" alt="chevron" class="nav__arrow"></a>
     `
     nav__list.append(linkEl);
   });
@@ -270,4 +270,5 @@ btn_toggle.addEventListener('click', () => {
 window.addEventListener('resize', (e) => {
   displayBtn();
   setBorderColor(e, data, idxOfPage);
+  setThemeColor(data, idxOfPage);
 })
