@@ -203,25 +203,25 @@ function setThemeColor(data, idx) {
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
 const navLinkNode = document.querySelectorAll('.nav__link');
 
-function setBorderColor(data, idx) {
+function setBorderColor(e, data, idx) {
   const navItemNode = document.querySelectorAll('.nav__item');
   const { color } = data[idx];
   let width = window.innerWidth;
   console.log('test')
 
     if (width > 900) {
-      navItemNode[idx].style.borderTopColor = color.theme;
-      navItemNode[idx].style.borderBottomColor = 'transparent';
-      console.log('desktop', navItemNode[idx]);
+      e.target.style.borderTopColor = color.theme;
+      e.target.style.borderBottomColor = 'transparent';
+      console.log('desktop', e.target);
     }
     if (width < 901 && width > 600) {
-      navItemNode[idx].style.borderTopColor = 'transparent';
-      navItemNode[idx].style.borderBottomColor = color.theme;
-      console.log('tablet', navItemNode[idx]);
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = color.theme;
+      console.log('tablet', e.target);
     } 
     if (width < 601) {
-      navItemNode[idx].style.borderTopColor = 'transparent';
-      navItemNode[idx].style.borderBottomColor = 'transparent';
+      e.target.style.borderTopColor = 'transparent';
+      e.target.style.borderBottomColor = 'transparent';
       console.log('mobile', navItemNode[idx]);
     }
 }
@@ -250,7 +250,7 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
 let navList = document.querySelector('.nav__list');
   navList.addEventListener('mouseover', function(e) {
     if (e.target) {
-      setBorderColor(data, idxOfPage);
+      setBorderColor(e, data, idxOfPage);
     }
 });
 
