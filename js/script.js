@@ -245,14 +245,14 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
   setThemeColor(data, idxOfPage);
 }))
 
-let navList = document.querySelector('.nav__list');
-  navList.addEventListener('mouseover', function(e) {
+let navLink = document.querySelector('.nav__link');
+  navLink.addEventListener('mouseover', function(e) {
     if (e.target) {
       setBorderColor(e, data, idxOfPage);
     }
 });
 
-navList.addEventListener('mouseout', function(e) {
+navLink.addEventListener('mouseout', function(e) {
   if (e.target) {
     e.target.style.borderBottomColor = 'transparent';
     e.target.style.borderTopColor = 'transparent';
