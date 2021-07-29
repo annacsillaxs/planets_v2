@@ -201,10 +201,10 @@ function setThemeColor(data, idx) {
 }
 
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
-const navItemNode = document.querySelectorAll('.nav__item');
 const navLinkNode = document.querySelectorAll('.nav__link');
 
 function setBorderColor(data, idx) {
+  const navItemNode = document.querySelectorAll('.nav__item');
   const { color } = data[idx];
   let width = window.innerWidth;
   console.log('test')
