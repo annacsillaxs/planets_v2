@@ -201,26 +201,28 @@ function setThemeColor(data, idx) {
 }
 
 // ========== SET BORDER TOP COLOR ON NAV ITEMS ==========
-// const navNode = document.querySelectorAll('.nav__item');
-function setBorderColor(e, data, idx) {
+const navItemNode = document.querySelectorAll('.nav__item');
+const navLinkNode = document.querySelectorAll('.nav__link');
+
+function setBorderColor(data, idx) {
   const { color } = data[idx];
   let width = window.innerWidth;
   console.log('test')
 
     if (width > 900) {
-      e.target.style.borderTopColor = color.theme;
-      e.target.style.borderBottomColor = 'transparent';
-      console.log('desktop');
+      navItemNode[idx].style.borderTopColor = color.theme;
+      navItemNode[idx].style.borderBottomColor = 'transparent';
+      console.log('desktop', navItemNode[idx]);
     }
     if (width < 901 && width > 600) {
-      e.target.style.borderTopColor = 'transparent';
-      e.target.style.borderBottomColor = color.theme;
-      console.log('tablet');
+      navItemNode[idx].style.borderTopColor = 'transparent';
+      navItemNode[idx].style.borderBottomColor = color.theme;
+      console.log('tablet', navItemNode[idx]);
     } 
     if (width < 601) {
-      e.target.style.borderTopColor = 'transparent';
-      e.target.style.borderBottomColor = 'transparent';
-      console.log('mobile');
+      navItemNode[idx].style.borderTopColor = 'transparent';
+      navItemNode[idx].style.borderBottomColor = 'transparent';
+      console.log('mobile', navItemNode[idx]);
     }
 }
 
@@ -245,14 +247,14 @@ btnNode.forEach(btn => btn.addEventListener('mouseout', (e) => {
   setThemeColor(data, idxOfPage);
 }))
 
-let navLink = document.querySelector('.nav__link');
-  navLink.addEventListener('mouseover', function(e) {
+let navList = document.querySelector('.nav__list');
+  navList.addEventListener('mouseover', function(e) {
     if (e.target) {
-      setBorderColor(e, data, idxOfPage);
+      setBorderColor(data, idxOfPage);
     }
 });
 
-navLink.addEventListener('mouseout', function(e) {
+navList.addEventListener('mouseout', function(e) {
   if (e.target) {
     e.target.style.borderBottomColor = 'transparent';
     e.target.style.borderTopColor = 'transparent';
